@@ -58,7 +58,7 @@
         <h1>Ihsan & Ulfa</h1>
         <p>Akan melangsungkan resepsi pernikahan dalam:</p>
         <div class="simply-countdown"></div>
-        <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()"
+        <a href="#home" class="btn btn-lg mt-2" onclick="enableScroll()"
           >Buka Undangan</a
         >
       </main>
@@ -115,6 +115,9 @@
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
             <h2>Acara Pernikahan</h2>
+            <div class="home-photo">
+              <img src="img/bismillah.png" alt="bismillah" />
+            </div>
             <h3>
               Dengan memohon Rahmat dan Ridho dari Allah SWT. Kami bermaksud
               menyelenggarakan syukuran Pernikahan Putra Putri Kami.
@@ -135,9 +138,8 @@
                   Praesentium reiciendis sequi, voluptatum ex quae atque!
                 </p> -->
                 <p>
-                  Putra Ketiga dari Bapak. Abdul Manan <br />
-                  dan <br />
-                  Ibu Maslifah
+                  Putra Ketiga dari Bapak Abdul Manan <br />
+                  dan Ibu Maslifah
                 </p>
               </div>
               <div class="col-4">
@@ -168,9 +170,8 @@
                   Praesentium reiciendis sequi, voluptatum ex quae atque!
                 </p> -->
                 <p>
-                  Putri Pertama dari Bapak. Burhan <br />
-                  dan <br />
-                  Ibu Rohana
+                  Putri Pertama dari Bapak Burhan <br />
+                  dan Ibu Rohana
                 </p>
               </div>
             </div>
@@ -684,7 +685,7 @@
       simplyCountdown(".simply-countdown", {
         year: 2025, // required
         month: 7, // required
-        day: 4, // required
+        day: 6, // required
         hours: 8, // Default is 0 [0-23] integer
         words: {
           //words displayed into the countdown
@@ -955,7 +956,7 @@
 
     <script>
       const homeElements = document.querySelectorAll(
-        ".hero h1, .hero h4, .hero p, .home h2, .home h3, .home .couple, .Surah"
+        ".hero h1, .hero h4, .hero p, .home h2, .home h3, .home .couple, .surah, .home-photo"
       );
 
       const homeObserver = new IntersectionObserver(

@@ -1044,13 +1044,23 @@
 
         function createFlower() {
           const flower = document.createElement("img");
-          flower.src = "img/flower.png"; // Ganti dengan gambar bunga transparan
+
+          // Pilih warna bunga secara acak
+          const flowerImages = [
+            "img/flower1.png", // Merah
+            "img/flower2.png", // Pink
+            "img/flower3.png", // Putih
+            "img/flower1.png", // Kuning
+          ];
+          flower.src =
+            flowerImages[Math.floor(Math.random() * flowerImages.length)];
+
           flower.classList.add("flower");
 
           // Posisi jatuh acak
           flower.style.left = Math.random() * window.innerWidth + "px";
 
-          // Ukuran dan durasi jatuh berdasarkan layar
+          // Variasi ukuran dan durasi jatuh
           let size, duration;
           if (window.innerWidth <= 576) {
             // Mobile
@@ -1078,7 +1088,7 @@
           }, duration * 1000);
         }
 
-        // Hasilkan bunga setiap 800ms di mobile, 500ms di tablet, 300ms di desktop
+        // Interval jatuh bunga sesuai ukuran layar
         let interval =
           window.innerWidth <= 576 ? 800 : window.innerWidth <= 768 ? 500 : 300;
         setInterval(createFlower, interval);

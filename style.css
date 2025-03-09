@@ -936,9 +936,7 @@ footer li {
 .flower {
   position: absolute;
   top: -50px;
-  width: 30px;
-  height: 30px;
-  opacity: 0.8;
+  opacity: 0.5;
   animation: fall linear infinite;
 }
 
@@ -950,6 +948,7 @@ footer li {
     transform: translateY(100vh) rotate(360deg);
   }
 }
+
 
 
 
@@ -1023,7 +1022,7 @@ footer li {
   .flower {
     width: 30px;
     height: 30px;
-    opacity: 0.8;
+    opacity: 0.5;
     animation-duration: 3s;
   }
 }
@@ -1094,7 +1093,7 @@ footer li {
   .flower {
     width: 20px;
     height: 20px;
-    opacity: 0.7;
+    opacity: 0.5;
     animation-duration: 4s;
   }
 }
@@ -1141,7 +1140,7 @@ footer li {
 
   .simply-countdown > .simply-section {
     padding: 35px;
-    margin: 3px;
+    margin: 5px;
   }
 
   .simply-countdown > .simply-section .simply-amount {
@@ -1230,7 +1229,7 @@ footer li {
   .flower {
     width: 15px;
     height: 15px;
-    opacity: 0.6;
+    opacity: 0.5;
     animation-duration: 5s;
   }
 }

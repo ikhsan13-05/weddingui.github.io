@@ -58,7 +58,7 @@
         <h1>Ihsan & Ulfa</h1>
         <p>Akan melangsungkan resepsi pernikahan dalam:</p>
         <div class="simply-countdown"></div>
-        <a href="#home" class="btn btn-lg mt-2" onclick="enableScroll()"
+        <a href="#home" class="btn btn-lg mt-3" onclick="enableScroll()"
           >Buka Undangan</a
         >
       </main>
@@ -664,7 +664,7 @@
     <!-- BACKSOUND -->
     <div id="audio-container">
       <audio id="bgm" loop>
-        <source src="audio/weddingsong.mp3" type="audio/mp3" />
+        <source src="audio/weddingsong1.mp3" type="audio/mp3" />
       </audio>
 
       <div class="audio-icon-wrapper" style="display: none">
@@ -730,10 +730,17 @@
 
       function enableScroll() {
         window.onscroll = function () {};
-        rootElement.style.scrollBehavior = "smooth";
-        // localStorage.setItem("opened", "true");
+        document.documentElement.style.scrollBehavior = "smooth";
         document.getElementById("bottom-nav").classList.remove("d-none");
         playAudio();
+        
+        // Tambahkan efek hilang dengan scale-up dan blokir scrolling ke hero
+        const heroSection = document.querySelector(".hero");
+        heroSection.classList.add("hide");
+        setTimeout(() => {
+          heroSection.style.display = "none";
+          heroSection.style.position = "absolute";
+        }, 600); // Waktu harus sesuai dengan durasi animasi CSS
       }
 
       function playAudio() {

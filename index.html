@@ -562,7 +562,11 @@
         <!-- Kartu ATM -->
         <div class="atm-container">
           <div class="atm-card atm-card1">
-            <img src="img/atm/Logo-Bank-BRI.png" alt="Logo Bank" class="logo-bank" />
+            <img
+              src="img/atm/Logo-Bank-BRI.png"
+              alt="Logo Bank"
+              class="logo-bank"
+            />
             <img src="img/atm/chip.png" alt="Chip ATM" class="chip" />
 
             <div class="account-name">Muhammad Ihsan</div>
@@ -579,11 +583,17 @@
           </div>
 
           <div class="atm-card atm-card2">
-            <img src="img/atm/Logo_Bank_Sulselbar.png" alt="Logo Bank" class="logo-bank" />
+            <img
+              src="img/atm/Logo_Bank_Sulselbar.png"
+              alt="Logo Bank"
+              class="logo-bank"
+            />
             <img src="img/atm/chip.png" alt="Chip ATM" class="chip" />
 
             <div class="account-name">Fitratul Ulfa</div>
-            <div class="account-number" id="accountNumber2">1402010000093209</div>
+            <div class="account-number" id="accountNumber2">
+              1402010000093209
+            </div>
 
             <button
               class="copy-button"
@@ -1023,6 +1033,42 @@
 
       lightbox.addEventListener("click", () => {
         lightbox.classList.remove("show");
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const flowerContainer = document.createElement("div");
+        flowerContainer.classList.add("falling-flowers");
+        document.body.appendChild(flowerContainer);
+
+        function createFlower() {
+          const flower = document.createElement("img");
+          flower.src = "img/flower.png"; // Ganti dengan gambar bunga transparan
+          flower.classList.add("flower");
+
+          // Posisi jatuh acak
+          flower.style.left = Math.random() * window.innerWidth + "px";
+
+          // Ukuran acak untuk variasi
+          const size = Math.random() * 20 + 20;
+          flower.style.width = size + "px";
+          flower.style.height = size + "px";
+
+          // Kecepatan jatuh acak
+          const duration = Math.random() * 3 + 3;
+          flower.style.animationDuration = duration + "s";
+
+          flowerContainer.appendChild(flower);
+
+          // Hapus bunga setelah animasi selesai
+          setTimeout(() => {
+            flower.remove();
+          }, duration * 1000);
+        }
+
+        // Hasilkan bunga setiap 500ms
+        setInterval(createFlower, 500);
       });
     </script>
   </body>

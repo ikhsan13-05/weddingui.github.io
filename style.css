@@ -1019,6 +1019,13 @@ footer li {
   .atm-card {
     width: 340px;
   }
+
+  .flower {
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    animation-duration: 3s;
+  }
 }
 
 /* Tablet */
@@ -1082,6 +1089,13 @@ footer li {
   }
   .center-icon {
     transform: scale(1.2);
+  }
+
+  .flower {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    animation-duration: 4s;
   }
 }
 
@@ -1190,9 +1204,9 @@ footer li {
     height: 200px;
   }
 
-  .qris-img {
+  /* .qris-img {
     width: 150px;
-  }
+  } */
 
   .bottom-nav {
     width: 100%;
@@ -1211,5 +1225,12 @@ footer li {
   .audio-icon-wrapper {
     width: 4rem;
     height: 18rem;
+  }
+
+  .flower {
+    width: 15px;
+    height: 15px;
+    opacity: 0.6;
+    animation-duration: 5s;
   }
 }

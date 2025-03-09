@@ -1050,13 +1050,24 @@
           // Posisi jatuh acak
           flower.style.left = Math.random() * window.innerWidth + "px";
 
-          // Ukuran acak untuk variasi
-          const size = Math.random() * 20 + 20;
+          // Ukuran dan durasi jatuh berdasarkan layar
+          let size, duration;
+          if (window.innerWidth <= 576) {
+            // Mobile
+            size = Math.random() * 10 + 15;
+            duration = Math.random() * 5 + 5;
+          } else if (window.innerWidth <= 768) {
+            // Tablet
+            size = Math.random() * 15 + 20;
+            duration = Math.random() * 4 + 4;
+          } else {
+            // Laptop & Desktop
+            size = Math.random() * 20 + 30;
+            duration = Math.random() * 3 + 3;
+          }
+
           flower.style.width = size + "px";
           flower.style.height = size + "px";
-
-          // Kecepatan jatuh acak
-          const duration = Math.random() * 3 + 3;
           flower.style.animationDuration = duration + "s";
 
           flowerContainer.appendChild(flower);
@@ -1067,8 +1078,10 @@
           }, duration * 1000);
         }
 
-        // Hasilkan bunga setiap 500ms
-        setInterval(createFlower, 500);
+        // Hasilkan bunga setiap 800ms di mobile, 500ms di tablet, 300ms di desktop
+        let interval =
+          window.innerWidth <= 576 ? 800 : window.innerWidth <= 768 ? 500 : 300;
+        setInterval(createFlower, interval);
       });
     </script>
   </body>
